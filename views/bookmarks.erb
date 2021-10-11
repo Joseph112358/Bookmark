@@ -1,1 +1,5 @@
-<a href = 'https://github.com/makersacademy/course/blob/main/apprenticeships_bookmark_manager/03_viewing_bookmarks.md'>https://github.com/makersacademy/course/blob/main/apprenticeships_bookmark_manager/03_viewing_bookmarks.md</a>
+
+<% @bookmarks.each{ |bookmark| %>
+  <%=bookmark%> 
+  <br>
+<%}%>
