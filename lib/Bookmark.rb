@@ -1,6 +1,7 @@
 
 class Bookmark
   
+  
   @@bookmark_arr = ["link","lonk"]
   
   

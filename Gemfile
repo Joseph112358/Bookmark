@@ -10,4 +10,5 @@ gem 'sinatra-reloader'
 gem 'capybara'
 gem 'rspec'
 gem 'webrick'
+gem 'pg'
 
