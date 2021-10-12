@@ -1,5 +1,8 @@
 <h1>Bookmark Project</h1>
 <br>
+<h4>Documentation</h4>
+There are two databases, one for testing, and for live data
+<br>
 <h4>Aim of the project</h4>
 
 <h4>User stories</h4>

@@ -8,5 +8,6 @@ feature 'viewing bookmarks' do
     expect(page).to have_content "http://www.makersacademy.com"
     expect(page).to have_content "http://www.youtube.com "
     expect(page).to have_content "www.yahoo.com"
+    expect(page).to have_content "www.amazon.co.uk"
   end
 end
