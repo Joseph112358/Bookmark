@@ -5,8 +5,8 @@ feature 'viewing bookmarks' do
   end
   scenario 'viewing bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content 'https://github.com/makersacademy/course/blob/main/apprenticeships_bookmark_manager/03_viewing_bookmarks.md'
     expect(page).to have_content "http://www.makersacademy.com"
-    expect(page).to have_content "http://www.google.com"
+    expect(page).to have_content "http://www.youtube.com "
+    expect(page).to have_content "www.yahoo.com"
   end
 end

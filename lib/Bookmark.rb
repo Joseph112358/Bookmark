@@ -1,12 +1,9 @@
-
+require 'pg'
 class Bookmark
-  
-  
-  @@bookmark_arr = ["link","lonk"]
-  
-  
 
   def self.list_bookmarks()
-    return @@bookmark_arr
+    connection = PG.connect(dbname: 'bookmark_manager')
+    result = connection.exec("SELECT * FROM bookmarks;")
+    result.map { |bookmark| bookmark['url']}
   end
 end
