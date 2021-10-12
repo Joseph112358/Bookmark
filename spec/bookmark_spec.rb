@@ -1,5 +1,4 @@
 
-
 require 'Bookmark'
 describe Bookmark do
   describe '#list_bookmarks' do
@@ -11,6 +10,12 @@ describe Bookmark do
       connection.exec("INSERT INTO bookmarks (url) VALUES ('www.amazon.co.uk')")
 
     expect(described_class.list_bookmarks).to eq(["http://www.makersacademy.com","http://www.youtube.com","www.yahoo.com","www.amazon.co.uk"])
+    end
+  end
+  describe "#.create" do
+    it "adds to the table a new link" do
+      Bookmark.create(link: 'www.facebook.com')
+      expect(Bookmark.list_bookmarks).to include 'www.facebook.com'
     end
   end
 end

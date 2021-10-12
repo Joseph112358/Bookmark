@@ -23,9 +23,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/new_bookmark' do
-    link = params[:link]
-    connection = PG.connect(dbname: 'bookmark_manager_test')
-    connection.exec("INSERT INTO bookmarks (url) VALUES('#{link}')")
+    Bookmark.create(url: params[:link])
     redirect '/bookmark'
   end
 
