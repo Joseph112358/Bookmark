@@ -10,4 +10,7 @@ There are two databases, one for testing, and for live data
 <li>As a user
 So that I can quickly access websites
 I need to be able to see my bookmarks</li>
+<li>As a user
+So that I can save my links
+I need to be able to add new bookmarks</li>
 </ol>

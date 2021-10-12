@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require_relative './lib/Bookmark.rb'
 
 class BookmarkManager < Sinatra::Base
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -15,6 +16,15 @@ class BookmarkManager < Sinatra::Base
     p ENV
     @bookmarks = Bookmark.list_bookmarks
     erb(:bookmarks)
+  end
+
+  get '/add_bookmark' do
+    erb(:add_bookmark)
+  end
+
+  post '/new_bookmark' do
+    @link = params[:link]
+    erb(:new_bookmark)
   end
 
   run! if app_file == $0
