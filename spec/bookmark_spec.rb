@@ -14,8 +14,9 @@ describe Bookmark do
   end
   describe "#.create" do
     it "adds to the table a new link" do
-      Bookmark.create(link: 'www.facebook.com')
-      expect(Bookmark.list_bookmarks).to include 'www.facebook.com'
+      bookmark = Bookmark.create(link: 'www.facebook.com', title: 'Facebook').first
+      expect(bookmark['link']).to eq 'www.facebook.com'
+      expect(bookmark['title']).to eq 'Facebook'
     end
   end
 end
